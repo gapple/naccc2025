@@ -1,0 +1,93 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+:root {
+    font-family: sans-serif;
+    height: 100%;
+}
+
+body {
+
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+header {
+    max-width: 1024px;
+    margin: auto;
+    padding: 1.5rem 1rem 1rem;
+    font-weight: bold;
+}
+
+#banner {
+    img {
+        display: block;
+        max-width: 100%;
+        object-fit: cover;
+    }
+}
+
+menu {
+    max-width: 1024px;
+    margin: .5rem auto;
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+
+    li {
+        margin: auto;
+        display: inline-block;
+        text-align: center;
+        flex-grow: 1;
+    }
+
+    a {
+        display: block;
+        color: #000;
+        padding: 0.5rem;
+        text-decoration: none;
+
+        &:hover, &:active {
+            background: #eee;
+        }
+    }
+}
+
+section.content {
+    max-width: 1024px;
+    margin: 1rem auto 0;
+    min-height: 25vh;
+
+    h2 {
+        padding: 0.5rem;
+        background-image: linear-gradient(to bottom, #fff 0%, #ccc 60%, #ccc 75%, #fff 100%);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #banner img {
+        width: 100%;
+        max-height: 50vh;
+    }
+
+}
+
+@media screen and (min-width: 1025px) {
+    header {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    section.content h2 {
+        width: 100vw;
+        margin-left: calc((min(100vw, 1024px) - 100vw) / 2);
+        padding: 0.5rem calc((100vw - min(100vw, 1024px)) / 2);
+    }
+}
