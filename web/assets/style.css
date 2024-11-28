@@ -7,12 +7,21 @@
 }
 
 :root {
-    font-family: sans-serif;
+    --bg: #E0C5AA;
+    --red: #D65442;
+    --yellow: #F6B928;
+
     height: 100%;
+    font-family: sans-serif;
+    overscroll-behavior: none;
+}
+html {
 }
 
 body {
-
+    background-image: url('images/bg.png');
+    background-size: 150px;
+    background-repeat: repeat;
 }
 
 input, button, textarea, select {
@@ -22,8 +31,19 @@ input, button, textarea, select {
 header {
     max-width: 1024px;
     margin: auto;
-    padding: 1.5rem 1rem 1rem;
     font-weight: bold;
+
+    h1 {
+        padding: 1.5rem 1rem 1rem;
+        color: #000;
+        -webkit-text-stroke: 1px #555;
+        font-weight: normal;
+        font-size: 3rem;
+        background-image: url("images/spray.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-x: -25px;
+    }
 }
 
 #banner {
@@ -39,6 +59,7 @@ header {
         display: block;
         max-width: 100%;
         object-fit: cover;
+        filter: saturate(75%) sepia(20%);
     }
     div {
         grid-column: 4/7;
@@ -53,10 +74,13 @@ header {
 
 menu {
     max-width: 1024px;
-    margin: .5rem auto;
+    margin: -1.5rem auto 0.5rem;
     display: flex;
-    padding: 0;
     flex-wrap: wrap;
+    position: relative;
+    font-size: 1.25rem;
+    padding: 0;
+    background: #D65442;
 
     li {
         margin: auto;
@@ -67,24 +91,37 @@ menu {
 
     a {
         display: block;
-        color: #000;
-        padding: 0.5rem;
+        color: var(--yellow);
+        -webkit-text-stroke: 1px rgba(0, 0, 0, 0.8);
+        font-weight: bold;
+        padding: 0.75rem 0.5rem;
         text-decoration: none;
 
         &:hover, &:active {
-            background: #eee;
+            background: rgba(0, 0, 0, 0.1);
         }
     }
 }
 
 section.content {
     max-width: 1024px;
-    margin: 1rem auto 0;
-    min-height: 25vh;
+    margin: 1.5rem auto 1rem;
+
+    & > * {
+        padding: 0 0.5rem;
+    }
 
     h2 {
-        padding: 0.5rem;
-        background-image: linear-gradient(to bottom, #fff 0%, #ccc 60%, #ccc 75%, #fff 100%);
+        color: var(--red);
+        border-bottom: 1px solid rgba(0,0,0,0.5);
+    }
+
+    p {
+        line-height: 1.3em;
+    }
+
+    &:has(h2) {
+        min-height: 25vh;
     }
 }
 
@@ -100,15 +137,29 @@ section.content {
     header {
         padding-left: 0;
         padding-right: 0;
+
+         h1 {
+             padding-left: calc(25px + 1rem);
+             margin-left: -25px;
+             background-position-x: 0;
+         }
     }
     #banner div {
         grid-column: 5 / 7;
         font-size: 2.5rem;
     }
 
-    section.content h2 {
-        width: 100vw;
-        margin-left: calc((min(100vw, 1024px) - 100vw) / 2);
-        padding: 0.5rem calc((100vw - min(100vw, 1024px)) / 2);
+    menu {
+        --ribbon-indent: .25em;
+        padding: 0 calc(2* var(--ribbon-indent));
+        clip-path:
+                polygon(
+                        0 0,
+                        100% 0,
+                        calc(100% - var(--ribbon-indent)) 50%,
+                        100% 100%,
+                        0 100%,
+                        var(--ribbon-indent) 50%
+                );
     }
 }
