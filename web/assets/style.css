@@ -107,6 +107,7 @@ menu {
 }
 
 section.content {
+    position: relative;
     max-width: 1024px;
     margin: 1.5rem auto 1rem;
 
@@ -128,6 +129,25 @@ section.content {
     }
     &:has(p), &:has(div) {
         min-height: 0;
+    }
+}
+
+.content.race-info {
+    img {
+        padding: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 70%;
+        max-height: 100%;
+        width: 30%;
+        object-fit: cover;
+        height: 100%;
+    }
+}
+@media (orientation: landscape) {
+    .content.race-info {
+        min-height: 60vh;
     }
 }
 
@@ -218,7 +238,11 @@ section.content {
                         var(--ribbon-indent) 50%
                 );
     }
-
+    .content.race-info {
+        .background-image {
+          width: calc(30% + var(--overflow-margin));
+        }
+    }
     .content.schedule {
         .days {
             grid-template-columns: repeat(3, 1fr);
