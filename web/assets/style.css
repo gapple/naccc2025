@@ -8,22 +8,24 @@
 
 :root {
     --bg: #E18C23;
+    --black: #333;
+    --blue: #226B9A;
+    --dark-grey: #475056;
     --light-bg: #EEE0B3;
     --red: #D65442;
-    --blue: #226B9A;
     --white: #F8F3EE;
-    --dark-grey: #475056;
-    --black: #333;
-    --overflow-margin: calc((100vw - 1024px)/2);
 
-    height: 100%;
+    --overflow-margin: calc((100vw - 1024px) / 2);
+
     font-family: sans-serif;
+    height: 100%;
     overscroll-behavior: none;
 }
 
 a {
     color: inherit;
 }
+
 img {
     display: block;
     padding: 0;
@@ -38,32 +40,33 @@ input, button, textarea, select {
 }
 
 header {
-    position: relative;
-    max-width: 1024px;
-    margin: auto;
-    font-weight: bold;
     display: flex;
     flex-wrap: wrap;
+    font-weight: bold;
     justify-content: space-between;
+    margin: auto;
+    max-width: 1024px;
+    position: relative;
 
     h1 {
-        padding: 1.5rem 1rem 1rem;
         color: var(--black);
-        -webkit-text-stroke: 1px var(--dark-grey);
-        font-weight: normal;
         font-size: 3rem;
+        font-weight: normal;
+        padding: 1.5rem 1rem 1rem;
+        -webkit-text-stroke: 1px var(--dark-grey);
     }
+
     img {
-        padding: 0.5rem;
-        max-width: 100%;
         max-height: 5rem;
+        max-width: 100%;
+        padding: 0.5rem;
     }
 
     .info {
-        margin: 0.5rem;
-        font-size: 1.5rem;
-        color: var(--light-bg);
         align-content: end;
+        color: var(--light-bg);
+        font-size: 1.5rem;
+        margin: 0.5rem;
 
         br {
             display: none;
@@ -71,14 +74,15 @@ header {
 
         & > div {
             display: inline-block;
-            text-transform: uppercase;
             font-weight: bold;
+            text-transform: uppercase;
         }
 
         .location {
             span:first-child {
                 color: var(--blue);
             }
+
             span:last-child {
                 color: var(--red);
             }
@@ -90,14 +94,14 @@ header {
     }
 
     .language-switcher {
-        position: absolute;
-        top: 0.5rem;
-        right: 0;
         display: flex;
+        position: absolute;
+        right: 0;
+        top: 0.5rem;
 
         a, span {
-            padding: 0 0.5rem;
             border-right: 1px solid var(--black);
+            padding: 0 0.5rem;
 
             &:last-child {
                 border-right-width: 0;
@@ -105,10 +109,11 @@ header {
         }
 
         a {
-            text-decoration: none;
             color: var(--dark-grey);
             font-weight: normal;
+            text-decoration: none;
         }
+
         span {
             font-weight: bold;
         }
@@ -120,33 +125,35 @@ header {
 
     picture {
     }
+
     img {
+        filter: saturate(75%) sepia(20%);
         max-width: 100%;
         object-fit: cover;
-        filter: saturate(75%) sepia(20%);
+        object-position: 50% 65%;
     }
 }
 
 menu {
-    max-width: 1024px;
-    margin: -1.5rem auto 0.5rem;
+    background: var(--light-bg);
     display: flex;
     flex-wrap: wrap;
-    position: relative;
     font-size: 1.25rem;
+    margin: -1.5rem auto 0.5rem;
+    max-width: 1024px;
     padding: 0;
-    background: var(--light-bg);
+    position: relative;
 
     li {
-        margin: auto;
         display: inline-block;
-        text-align: center;
         flex-grow: 1;
+        margin: auto;
+        text-align: center;
     }
 
     a {
-        display: block;
         color: var(--dark-grey);
+        display: block;
         font-weight: bold;
         padding: 0.75rem 0.5rem;
         text-decoration: none;
@@ -159,24 +166,25 @@ menu {
 }
 
 section.content {
-    position: relative;
-    max-width: 1024px;
     margin: 1.5rem auto 1rem;
+    max-width: 1024px;
+    position: relative;
 
     h2 {
-        padding: 0 0.5rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
         color: var(--blue);
-        border-bottom: 1px solid rgba(0,0,0,0.5);
+        padding: 0 0.5rem;
     }
 
     p {
-        padding: 0 0.5rem;
         line-height: 1.3em;
+        padding: 0 0.5rem;
     }
 
     & {
         min-height: 25vmax;
     }
+
     &:has(p), &:has(div) {
         min-height: 0;
     }
@@ -187,15 +195,16 @@ section.content {
 }
 
 .side-image {
+    height: 100%;
+    left: 70%;
+    max-height: 100%;
+    object-fit: cover;
     padding: 0;
     position: absolute;
     top: 0;
-    left: 70%;
-    max-height: 100%;
     width: 30%;
-    object-fit: cover;
-    height: 100%;
 }
+
 .side-image.full {
     object-fit: contain;
     object-position: left;
@@ -204,6 +213,7 @@ section.content {
 .content.race-info {
     padding-right: 30%;
 }
+
 @media (orientation: landscape) {
     .content.race-info {
         min-height: 60vh;
@@ -212,10 +222,10 @@ section.content {
 
 .content.schedule {
     .days {
-        margin-top: 1rem;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
         gap: 1rem 0.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 1rem;
 
         & > div {
             min-height: 5rem;
@@ -234,8 +244,8 @@ section.content {
 .content.registration {
     .side-image {
         left: 80%;
-        width: 50%;
         max-height: none;
+        width: 50%;
     }
 }
 
@@ -247,29 +257,30 @@ section.content {
 }
 
 .content.sponsors {
-    max-width: none;
-    margin: 0 auto;
-    padding: 1rem 0 5rem;
     background-image: url("images/IMG_2309.webp");
     background-size: cover;
+    margin: 0 auto;
+    max-width: none;
+    padding: 1rem 0 5rem;
 
     h2 {
-        visibility: hidden;
         height: 0;
+        visibility: hidden;
     }
 
     .logos {
+        column-gap: 1rem;
         display: flex;
         justify-content: center;
+        padding: 0 1rem;
     }
-    .logos > * {
-        margin: 1rem;
-    }
+
     .logos img {
         border-radius: 50%;
         max-width: 100px;
     }
 }
+
 @media screen and (max-width: 767px) {
     header {
         .language-switcher {
@@ -277,10 +288,11 @@ section.content {
         }
     }
 }
+
 @media screen and (min-width: 768px) {
     #banner img {
-        width: 100%;
         max-height: 50vh;
+        width: 100%;
     }
 
     header {
@@ -308,46 +320,52 @@ section.content {
         padding-right: 0;
 
         h1 {
-            padding-left: calc(25px + 1rem);
-            margin-left: -25px;
             background-position-x: 0;
+            margin-left: -25px;
+            padding-left: calc(25px + 1rem);
         }
+
         img {
             max-height: 8rem;
         }
     }
+
     #banner > div {
         position: absolute;
         right: var(--overflow-margin);
     }
 
     menu {
+        clip-path: polygon(
+                0 0,
+                100% 0,
+                calc(100% - var(--ribbon-indent)) 50%,
+                100% 100%,
+                0 100%,
+                var(--ribbon-indent) 50%
+        );
         --ribbon-indent: .25em;
-        padding: 0 calc(2* var(--ribbon-indent));
-        clip-path:
-                polygon(
-                        0 0,
-                        100% 0,
-                        calc(100% - var(--ribbon-indent)) 50%,
-                        100% 100%,
-                        0 100%,
-                        var(--ribbon-indent) 50%
-                );
+        padding: 0 calc(2 * var(--ribbon-indent));
     }
+
     section.content:has(.side-image) {
         overflow: visible;
     }
+
     .side-image {
         width: calc(30% + var(--overflow-margin));
     }
+
     .content.race-info {
         padding-right: calc(1024px * 0.3);
     }
+
     .content.schedule {
         .days {
             grid-template-columns: repeat(3, 1fr);
         }
     }
+
     .content.registration {
         .side-image {
             /*width: auto;*/
