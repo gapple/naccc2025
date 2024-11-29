@@ -37,11 +37,13 @@ input, button, textarea, select {
 }
 
 header {
+    position: relative;
     max-width: 1024px;
     margin: auto;
     font-weight: bold;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 
     h1 {
         padding: 1.5rem 1rem 1rem;
@@ -63,7 +65,6 @@ header {
     .info {
         margin: 0.5rem;
         font-size: 1.5rem;
-        z-index: 1;
         color: var(--light-bg);
         align-content: end;
 
@@ -88,6 +89,31 @@ header {
 
         .date {
             text-align: right;
+        }
+    }
+
+    .language-switcher {
+        position: absolute;
+        top: 0.5rem;
+        right: 0;
+        display: flex;
+
+        a, span {
+            padding: 0 0.5rem;
+            border-right: 1px solid #333;
+
+            &:last-child {
+                border-right-width: 0;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: #666;
+            font-weight: normal;
+        }
+        span {
+            font-weight: bold;
         }
     }
 }
@@ -242,7 +268,13 @@ section.content {
         max-width: 100px;
     }
 }
-
+@media screen and (max-width: 767px) {
+    header {
+        .language-switcher {
+            right: 1rem;
+        }
+    }
+}
 @media screen and (min-width: 768px) {
     #banner img {
         width: 100%;
@@ -250,14 +282,19 @@ section.content {
     }
 
     header {
-        justify-content: space-between;
-    }
-    header .info {
-        br {
-            display: inline;
+
+        img {
+            max-height: 6rem;
         }
-        .date {
-            margin-left: -1.5rem;
+
+        .info {
+            br {
+                display: inline;
+            }
+
+            .date {
+                margin-left: -1.5rem;
+            }
         }
     }
 
