@@ -264,7 +264,11 @@ section.content {
         display: flex;
         justify-content: center;
     }
+    .logos > * {
+        margin: 1rem;
+    }
     .logos img {
+        border-radius: 50%;
         max-width: 100px;
     }
 }
