@@ -2,18 +2,18 @@
 <html lang="en-ca">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; object-src 'none'; script-src-elem 'unsafe-inline'" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <link rel="icon" href="assets/icon.192.webp" sizes="192x192" type="image/webp" />
+  <meta content="default-src 'self'; object-src 'none'; script-src-elem 'unsafe-inline'" http-equiv="Content-Security-Policy" />
+  <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport" />
+  <link href="assets/icon.192.webp" rel="icon" sizes="192x192" type="image/webp" />
 
   <title>NACCC 2025</title>
 
-  <link rel="stylesheet" href="assets/style.css">
+  <link href="assets/style.css" rel="stylesheet">
 </head>
 <body>
   <header>
-    <div class="language-switcher"><span aria-label="English">EN</span><a href="#" aria-label="Español)">ES</a></div>
-    <img src="assets/images/naccc-logo.webp" alt="North American Cycle Courier Championship">
+    <div class="language-switcher"><span aria-label="English">EN</span><a aria-label="Español" href="#">ES</a></div>
+    <img alt="North American Cycle Courier Championship" src="assets/images/naccc-logo.webp">
     <div class="info">
       <div class="location"><span>Vancouver</span> <br><span>Canada</span></div>
       <div class="date">August <br>24th - 31st</div>
@@ -21,7 +21,7 @@
   </header>
   <section id="banner">
     <picture>
-      <source srcset="assets/images/240726-gamblecat-007.webp" media="(min-width: 1025px)">
+      <source media="(min-width: 1025px)" srcset="assets/images/240726-gamblecat-007.webp">
       <img alt="" src="assets/images/240726-gamblecat-007@0.5x.webp">
     </picture>
   </section>
@@ -29,47 +29,88 @@
     <li><a href="#race-info">Race Info</a></li>
     <li><a href="#schedule">Schedule</a></li>
     <li><a href="#registration">Registration</a></li>
+    <li><a href="#accommodations">Accommodations</a></li>
     <li><a href="#volunteer">Volunteer</a></li>
     <li><a href="#contact">Contact</a></li>
   </menu>
   <section class="content">
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consequat vitae sem sed egestas. Sed eleifend lacus quis tellus suscipit pharetra. Donec pulvinar urna justo, in efficitur justo ultricies pulvinar. Donec ac metus scelerisque, fringilla nibh sed, rutrum dolor. Pellentesque a interdum lacus.
+      The North American Cycle Courier Championships is coming back to Canada!! With the Pacific Ocean, iconic North Shore mountains, and booming cycling culture, NACCC 2025 in Vancouver will be one you don't want to miss. A week-long event, Vancouver NACCC will feature:
     </p>
-  </section>
-  <section class="content race-info">
-    <h2 id="race-info">Race Info</h2>
-    <img class="side-image" alt="" src="assets/images/yvrcrit2-19of88.webp" loading="lazy">
+    <ul>
+      <li>A 2 night camping trip to Golden Ears Park</li>
+      <li>Races by local fixedgear crit host YVRFixed</li>
+      <li>Alleycats from Tyrone Siglos who has up to 300 folks attend Riley's Rips, 45% of which identify as women, trans, or non-binary</li>
+      <li>Qualifiers and championship events by NACCC regular and former Vancouver courier Robert Doherty as featured on the cover on Loop Magazine</li>
+    </ul>
+    <p>
+      The lower mainland's seamless transition of pavement to trail, rich diversity, and many hills will be a challenging but beautiful setting for NACCC 2025 that will have something for everyone.
+    </p>
   </section>
   <section class="content schedule">
     <h2 id="schedule">Schedule</h2>
     <div class="days">
       <div>
-        <h3>Tuesday</h3>
+        <h3>Sunday 24</h3>
       </div>
       <div>
-        <h3>Wednesday</h3>
+        <h3>Monday 25</h3>
       </div>
       <div>
-        <h3>Thursday</h3>
+        <h3>Tuesday 26</h3>
       </div>
       <div>
-        <h3>Friday</h3>
+        <h3>Wednesday 27</h3>
       </div>
       <div>
-        <h3>Saturday</h3>
+        <h3>Thursday 28</h3>
       </div>
       <div>
-        <h3>Sunday</h3>
+        <h3>Friday 29</h3>
+      </div>
+      <div>
+        <h3>Saturday 30</h3>
+      </div>
+      <div>
+        <h3>Sunday 31</h3>
       </div>
     </div>
   </section>
+  <section class="content">
+    <h2>Camping</h2>
+    <p>
+      Escape the hustle of city streets and join us for a 2-night camping adventure at Golden Ears Provincial Park, BC.
+      A scenic 60km ride from Vancouver will Golden Ears is the opportunity to immerse yourself in stunning mountain views, serene lakes, and lush forests, with plenty of trails to explore.
+      Connect with fellow couriers from across North America, and get the true experience of BCs rain forests. A great chance to recharge your battery and relax before taking on the week's events.
+    </p>
+    <p>NOTE ABOUT DEADLINE TO BOOK</p>
+  </section>
+  <section class="content race-info">
+    <h2 id="race-info">Race Info</h2>
+    <img alt="" class="side-image" loading="lazy" src="assets/images/yvrcrit2-19of88.webp">
+  </section>
   <section class="content registration">
     <h2 id="registration">Registration</h2>
-    <img class="side-image full" alt="" src="assets/images/dog.webp" loading="lazy">
+    <img alt="" class="side-image full" loading="lazy" src="assets/images/dog.webp">
+  </section>
+  <section class="content">
+    <h2 id="accommodations">Accommodations</h2>
+    <p>
+      Coming from out of town and need a place to stay??
+      We got you. The St. Regis Hotel, located in the heart of the city, has (amount/type of rooms) for (CAD/per person/night).
+      If that's out of your price range, fill out this accommodations form[link] and we'll connect you with a local host if possible.
+    </p>
   </section>
   <section class="content">
     <h2 id="volunteer">Volunteer</h2>
+    <p>
+      Vancouver’s cycling community is like no other. Whether a fair weather commuter or a seasoned vet, we come together as a community. Fill out the volunteer form [link] if you can help in any way.
+    </p>
+
+    <h3>Host Guests</h3>
+    <p>
+      Got a spare bed, couch, floor space, or yard for a tent? Couriers from across North America will be coming into town and to help keep their costs manageable, we're looking for hosts to connect them with. Please fill out the host form [link] and you'll be connected with someone coming to town. Like good old fashioned pen pals.
+    </p>
   </section>
   <section class="content contact">
     <h2 id="contact">Contact</h2>
@@ -80,9 +121,9 @@
   <section class="content sponsors">
     <h2 id="sponsors">Sponsors</h2>
     <div class="logos">
-      <a href="https://instagram.com/yvrfixed"><img src="assets/images/logos/yvrfixed.png" alt="YVR Fixed" loading="lazy"></a>
-      <a href="https://instagram.com/nightridersyvr"><img src="assets/images/logos/nryvr.jpg" alt="Night Riders YVR" loading="lazy"></a>
-      <a href="https://instagram.com/chillridesyvr"><img src="assets/images/logos/chillridesyvr.webp" alt="Chill Rides" loading="lazy"></a>
+      <a href="https://instagram.com/yvrfixed"><img alt="YVR Fixed" loading="lazy" src="assets/images/logos/yvrfixed.png"></a>
+      <a href="https://instagram.com/nightridersyvr"><img alt="Night Riders YVR" loading="lazy" src="assets/images/logos/nryvr.jpg"></a>
+      <a href="https://instagram.com/chillridesyvr"><img alt="Chill Rides" loading="lazy" src="assets/images/logos/chillridesyvr.webp"></a>
     </div>
   </section>
 </body>

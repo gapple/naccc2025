@@ -10,15 +10,11 @@
     --bg: #E18C23;
     --black: #333;
     --blue: #226B9A;
-    --dark-grey: #475056;
-    --light-bg: #EEE0B3;
     --red: #D65442;
     --white: #F8F3EE;
-
+    --light-bg: #EEE0B3;
+    --dark-grey: #475056;
     --overflow-margin: calc((100vw - 1024px) / 2);
-
-    font-family: sans-serif;
-    height: 100%;
     overscroll-behavior: none;
 }
 
@@ -33,6 +29,7 @@ img {
 
 body {
     background-color: var(--bg);
+    font-family: sans-serif;
 }
 
 input, button, textarea, select {
@@ -170,15 +167,29 @@ section.content {
     max-width: 1024px;
     position: relative;
 
+    h2, h3, p {
+        padding: 0 0.5rem;
+    }
     h2 {
         border-bottom: 1px solid rgba(0, 0, 0, 0.5);
         color: var(--blue);
-        padding: 0 0.5rem;
+    }
+    h3 {
+        margin: 1rem 0 0.5rem;
+
+    }
+    h2 + p {
+        margin-top: 0.75rem;
+    }
+    p, ul {
+        margin-bottom: 0.5rem;
+    }
+    li {
+        margin-bottom: 0.25rem;
     }
 
     p {
-        line-height: 1.3em;
-        padding: 0 0.5rem;
+        line-height: 1.5em;
     }
 
     & {
@@ -243,9 +254,13 @@ section.content {
 
 .content.registration {
     .side-image {
-        left: 80%;
-        max-height: none;
-        width: 50%;
+        height: auto;
+        left: auto;
+        max-height: calc(min(100%, 20rem));
+        max-width: 40%;
+        object-position: right;
+        right: -10%;
+        width: auto;
     }
 }
 
@@ -312,6 +327,11 @@ section.content {
         }
     }
 
+    .content.registration {
+        .side-image {
+            right: -3%;
+        }
+    }
 }
 
 @media screen and (min-width: 1025px) {
@@ -368,8 +388,7 @@ section.content {
 
     .content.registration {
         .side-image {
-            /*width: auto;*/
-            max-width: calc(20% + var(--overflow-margin));
+            right: calc(max(min(-3%, -1 * var(--overflow-margin)), -10%));
         }
     }
 
